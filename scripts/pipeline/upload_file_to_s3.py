@@ -36,7 +36,7 @@ def main():
 
     for file_name in upload_file_names:
         response = client.upload_file(
-            Filename=local_path,
+            Filename=file_name,
             Bucket=bucket_name,
             Key=file_name,
             ExtraArgs={'ContentType':'text/html'}
