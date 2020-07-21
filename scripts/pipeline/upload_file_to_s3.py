@@ -11,7 +11,7 @@ def main():
 
     print(os.getcwd())
 
-    sourceDir = '/Users/jianweihuang/Documents/GitHub/CP3402/CP3402'
+    sourceDir = os.getcwd()
 
     upload_file_names = []
     for (sourceDir, dirname, filename) in os.walk(sourceDir):
