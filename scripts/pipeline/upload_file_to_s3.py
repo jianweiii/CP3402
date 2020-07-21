@@ -19,9 +19,8 @@ def main():
         upload_file_names.extend(filename)
         break
 
-    # upload_file_names.remove('.DS_Store')
-    # upload_file_names.remove('test.py')
-    # upload_file_names.remove('.gitattributes')
+    upload_file_names.remove('.DS_Store')
+    upload_file_names.remove('.gitattributes')
     print(upload_file_names)
 
     bucket_name=sys.argv[1]
@@ -40,8 +39,8 @@ def main():
         response = client.upload_file(
             Filename=file_name,
             Bucket=bucket_name,
-            Key=file_name,
-            ExtraArgs={'ContentType':'text/html'}
+            Key=file_name
+            # ExtraArgs={'ContentType':'text/html'}
         )
     print ('Done uploading')
 
