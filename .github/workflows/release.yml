@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Release to S3
-      run: bash scripts/pipeline/release.sh "cp3402-prac1-static-website" "prac1/mystaticweb.zip" ${{secrets.AWS_ACCESS_KEY}} ${{secrets.AWS_ACCESS_SECRET}} "mystaticweb.zip"
+      run: bash scripts/pipeline/release.sh "cp3402-prac1-static-website" "prac1/prac01" ${{secrets.AWS_ACCESS_KEY}} ${{secrets.AWS_ACCESS_SECRET}} "prac01"
