@@ -1,12 +1,26 @@
 import boto3
 import sys
+import os
 
 def main():
-    if (len(sys.argv) < 4):
+    if (len(sys.argv) < 6):
         print ('Error: Required 5 arguments.')
         # Checks for 6 because the script path is in position 0. So len is 6
         # for 5 arguments.
         sys.exit(1)
+    
+    sourceDir = '/Users/jianweihuang/Documents/GitHub/CP3402/CP3402'
+
+    upload_file_names = []
+    for (sourceDir, dirname, filename) in os.walk(sourceDir):
+        # print(filename)
+        upload_file_names.extend(filename)
+        break
+
+    upload_file_names.remove('.DS_Store')
+    upload_file_names.remove('test.py')
+    upload_file_names.remove('.gitattributes')
+    print(upload_file_names)
 
     bucket_name=sys.argv[1]
     aws_key=sys.argv[2]
@@ -20,12 +34,13 @@ def main():
     )
     client = session.client('s3')
 
-    response = client.upload_file(
-        Filename=local_path,
-        Bucket=bucket_name,
-        Key=aws_key,
-        ExtraArgs={'ContentType':'text/html'}
-    )
+    for file_name in upload_file_names:
+        response = client.upload_file(
+            Filename=local_path,
+            Bucket=bucket_name,
+            Key=file_name,
+            ExtraArgs={'ContentType':'text/html'}
+        )
     print ('Done uploading')
 
 
