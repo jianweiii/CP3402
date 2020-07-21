@@ -36,12 +36,20 @@ def main():
     client = session.client('s3')
 
     for file_name in upload_file_names:
-        response = client.upload_file(
-            Filename=file_name,
-            Bucket=bucket_name,
-            Key=file_name
-            # ExtraArgs={'ContentType':'text/html'}
-        )
+        if file_name.endswith('.html'):
+            response = client.upload_file(
+                Filename=file_name,
+                Bucket=bucket_name,
+                Key=file_name,
+                ExtraArgs={'ContentType':'text/html'}
+            )
+        else:
+            response = client.upload_file(
+                Filename=file_name,
+                Bucket=bucket_name,
+                Key=file_name
+                # ExtraArgs={'ContentType':'text/html'}
+            )
     print ('Done uploading')
 
 
