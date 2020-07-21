@@ -43,6 +43,13 @@ def main():
                 Key=file_name,
                 ExtraArgs={'ContentType':'text/html'}
             )
+        elif file_name.endswith('.css'):
+            response = client.upload_file(
+                Filename=file_name,
+                Bucket=bucket_name,
+                Key=file_name,
+                ExtraArgs={'ContentType':'text/css'}
+            )
         else:
             response = client.upload_file(
                 Filename=file_name,
