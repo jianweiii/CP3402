@@ -1,0 +1,12 @@
+.site-header {
+    background-color: black;
+}
+
+.site-header a {
+    text-decoration: none;
+    color: white;
+}
+
+.site-header a:hover {
+    color: rgb(184, 184, 184);
+}
