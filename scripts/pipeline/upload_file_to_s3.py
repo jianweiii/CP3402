@@ -8,7 +8,9 @@ def main():
         # Checks for 6 because the script path is in position 0. So len is 6
         # for 5 arguments.
         sys.exit(1)
-    
+
+    print(os.getcwd())
+
     sourceDir = '/Users/jianweihuang/Documents/GitHub/CP3402/CP3402'
 
     upload_file_names = []
@@ -17,9 +19,9 @@ def main():
         upload_file_names.extend(filename)
         break
 
-    upload_file_names.remove('.DS_Store')
-    upload_file_names.remove('test.py')
-    upload_file_names.remove('.gitattributes')
+    # upload_file_names.remove('.DS_Store')
+    # upload_file_names.remove('test.py')
+    # upload_file_names.remove('.gitattributes')
     print(upload_file_names)
 
     bucket_name=sys.argv[1]
