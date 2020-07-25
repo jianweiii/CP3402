@@ -1,3 +1,7 @@
+.white {
+    color: white;
+}
+
 .site-header {
     background-color: black;
 }
@@ -5,8 +9,33 @@
 .site-header a {
     text-decoration: none;
     color: white;
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .site-header a:hover {
     color: rgb(184, 184, 184);
+}
+
+.site-header .col-md-8 {
+    padding-top: 12px;
+}
+
+.header-background {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('keto-food.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header-btn {
+    color: white;
 }
