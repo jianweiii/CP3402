@@ -1,3 +1,7 @@
+.container {
+    max-width: 960px;
+}
+
 .white {
     color: white;
 }
@@ -31,6 +35,13 @@
     background-size: cover;
 }
 
+.overflow-hidden { overflow: hidden; }
+
+.flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+
 .logo {
     width: 100px;
     height: 100px;
@@ -38,4 +49,14 @@
 
 .header-btn {
     color: white;
+}
+
+.intro-text {
+    font-size: 20px;
+}
+
+.doctor-image {
+    background-image: url('doctor-main.jpg');
+    background-size: cover;
+    background-position: center;
 }
