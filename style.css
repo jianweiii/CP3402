@@ -60,3 +60,32 @@
     background-size: cover;
     background-position: center;
 }
+
+.underline {
+    border-bottom: solid rgb(31, 31, 63);
+}
+
+.product-layout {
+    border: solid black;
+    border-width: 1px;
+    padding: 0;
+}
+
+.product-layout img {
+    width: 200px;
+    height: 140px;
+}
+
+.numbering {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.product-info {
+    border-top: solid black;
+    border-width: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
