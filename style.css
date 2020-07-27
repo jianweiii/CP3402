@@ -21,9 +21,9 @@
     color: rgb(184, 184, 184);
 }
 
-.site-header .col-md-8 {
+/* .site-header a{
     padding-top: 12px;
-}
+} */
 
 .header-background {
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('keto-food.jpg');
@@ -88,4 +88,9 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 10px;
+}
+
+.resources-table a {
+    text-decoration: none;
+    color: black;
 }
